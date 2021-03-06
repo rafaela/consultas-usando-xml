@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Previsão do Tempo</title>
+        <meta charset="utf-8">
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+        <link rel="stylesheet" type="text/css" href="style.css" />
+        <script src="script.js"></script>
+
+    </head>
+
+    <body>
+        <form>
+            <label>Cidade</label>
+            <input type="text" id="cidade" name="cidade">
+            <button type="button" onclick="consulta()">Pesquisar</button>
+        </form>
+
+
+        <div id="resultado">
+            <p>Temperatura atual: <span id="tempAtual"></span> </p>
+            <p>Temperatura máxima: <span id="tempMax"></span> </p>
+            <p>Temperatura mínima: <span id="tempMin"></span> </p>
+            <p>Nascer do sol: <span id="nascerSol"></span> </p>
+            <p>Por do sol: <span id="porSol"></span> </p>
+            <p>Latitude: <span id="latitude"></span> </p>
+            <p>Longitude: <span id="long"></span> </p>
+            <p>Condição do tempo: <div id="icon"><img id="cond" src="" ></div></p>
+            
+        </div>
+        <div id="map"></div>
+        <script async
+            src="https://maps.googleapis.com/maps/api/js?key=KEY&callback=initMap&libraries=&v=weekly">
+        </script>
+        <script src="jquery.js"></script>
+        
+    </body>
+
+</html>
